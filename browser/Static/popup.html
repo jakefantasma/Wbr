@@ -1,0 +1,118 @@
+<style>
+  .container p {
+    margin: 0px;
+    padding: 0px;
+  }
+  .container h1 {
+    font-size: 35px;
+    margin: 0px;
+    padding: 0px;
+  }
+  .container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .container {
+    color: black;
+    background-color: rgb(97, 97, 97);
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    border: solid black 1px;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .space {
+    height: 10px;
+  }
+  .subContianer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .title_sty {
+    width: 100%;
+  }
+  .bnt_accion {
+    background-color: rgb(76, 130, 222);
+    border-radius: 5px;
+  }
+  .listado {
+    display: flex;
+    flex-direction: column;
+    max-height: 150px;
+    max-width: 350px;
+    min-width: 250px;
+    min-width: 120px;
+    border: 1px solid black;
+    overflow-y: auto;
+    align-self: center;
+  }
+  .item_list {
+    background-color: rgb(159, 159, 159);
+    border: 1px solid rgba(255, 255, 255, 0);
+    display: flex;
+    justify-content: space-between;
+  }
+  .listado::-webkit-scrollbar {
+    width: 12px;
+  }
+  .listado::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+  }
+  .listado::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #888, #555);
+    border-radius: 10px;
+    border: 2px solid #f0f0f0;
+  }
+  .listado::-webkit-scrollbar-thumb:hover {
+    background: #333;
+  }
+  .icon_play {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 16px solid #222222; /* verde tipo "ejecutar" */
+    cursor: pointer;
+    margin: 5px;
+  }
+</style>
+<div class="container" id="____ider">
+  <div class="title_sty">
+    <h1>Dashboard</h1>
+  </div>
+  <div class="space"></div>
+  <div class="subContianer">
+    <p>Load file js/typescript</p>
+    <input
+      class="bnt_accion"
+      type="button"
+      value="up script"
+      onclick='window.AddBlackList("intelaf.com")'
+    />
+  </div>
+  <ul class="listado" id="listado_domionios">
+    <li class="item_list">
+      <p>www.test.com</p>
+    </li>
+    <li class="item_list">
+      <p>www.dominio.com</p>
+    </li>
+  </ul>
+  <div class="space"></div>
+  <div class="subContianer">
+    <input class="bnt_accion" type="button" value="start record" />
+    <p>soporte unicamente para teclas</p>
+  </div>
+</div>

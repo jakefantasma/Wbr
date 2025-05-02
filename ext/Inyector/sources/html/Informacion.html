@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Plugin Eta Direct</title>
+    <script src="popup.js"></script>
+  </head>
+  <style type="text/css">
+    :root {
+      --main-bg-color: black;
+      --main-bg-text-color: white;
+      --main-bt-bg-color: white;
+      --main-bt-text-color: black;
+    }
+
+    a {
+      color: var(--main-text-color);
+    }
+
+    .btn {
+      background-color: var(--main-bt-bg-color);
+      border-radius: 10px;
+      max-width: 200px;
+      min-width: 100px;
+    }
+
+    body {
+      color: var(--main-bg-text-color);
+      height: 400px;
+      width: 400px;
+      background-color: var(--main-bg-color);
+    }
+  </style>
+  <body>
+    <h1>Bitacora</h1>
+    <p>Al estar activa la configuracion se aplicaran los sig. cambios a eta</p>
+    <ul>
+      <li>Reslatado de ruta</li>
+      <li>Cambio de tema (ordenes y mapa)</li>
+      <li>Panel para agregar ordenes (mapa y orden target)</li>
+    </ul>
+    <input class="btn" type="button" onclick="test()" value="do somthing" disabled />
+  </body>
+</html>

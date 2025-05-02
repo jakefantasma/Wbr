@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "inyector by:jf ",
+  "description": "handler que nos permite inyectar codigo de manera mas precisa",
+  "version": "1.0",
+  "browser_action": {
+    "default_popup": "sources/html/Informacion.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["sources/main.js"]
+    }
+  ]
+}
