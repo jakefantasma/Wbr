@@ -1,11 +1,20 @@
 const Database = require("better-sqlite3");
+const path = require("path");
+
+//load by profile
+let r_ = process.env.APPDATA;
+r_ = path.resolve(r_, "..");
+r_ = path.join(r_, "Local");
+
 let db = null;
 //change for json object an trasform data for simple gestion
 ///we transfor the data here
 class DbBase {
   constructor(file, name_db) {
     this.name_db = name_db;
-    this.db = new Database(`${file}.sqlite` /**{ verbose: console.log } */);
+    this.db = new Database(
+      path.join(r_, `Wbr`, `${file}.sqlite`) /**{ verbose: console.log } */
+    );
     this.define();
   }
   define() {

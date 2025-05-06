@@ -1,4 +1,14 @@
 <style>
+  p {
+    margin: 0px;
+    padding: 0px;
+    color: black;
+  }
+  label {
+    margin: 0px;
+    padding: 0px;
+    color: black;
+  }
   .container p {
     margin: 0px;
     padding: 0px;
@@ -17,8 +27,8 @@
     color: black;
     background-color: rgb(97, 97, 97);
     position: fixed;
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 600px;
     display: flex;
     flex-direction: row;
     border-radius: 5px;
@@ -49,10 +59,8 @@
   .listado {
     display: flex;
     flex-direction: column;
-    max-height: 150px;
-    max-width: 350px;
-    min-width: 250px;
-    min-width: 120px;
+    height: 150px;
+    width: 320px;
     border: 1px solid black;
     overflow-y: auto;
     align-self: center;
@@ -61,7 +69,11 @@
     background-color: rgb(159, 159, 159);
     border: 1px solid rgba(255, 255, 255, 0);
     display: flex;
-    justify-content: space-between;
+    width: 100%;
+    justify-content: space-evenly;
+    border: solid black 1px;
+    border: 3px;
+    margin: 3px;
   }
   .listado::-webkit-scrollbar {
     width: 12px;
@@ -88,30 +100,33 @@
     margin: 5px;
   }
 </style>
+<li class="item_list" id="item_list">
+  <div>
+    <p name="numero_id">1</p>
+    <p name="activo">0</p>
+  </div>
+  <div>
+    <p name="url">www.muestra.com</p>
+    <p name="redirecion">www.google.com</p>
+  </div>
+</li>
 <div class="container" id="____ider">
   <div class="title_sty">
     <h1>Dashboard</h1>
   </div>
   <div class="space"></div>
   <div class="subContianer">
-    <p>Load file js/typescript</p>
+    <input type="text" value="" placeholder="sub domain" id="custo_url" />
     <input
       class="bnt_accion"
       type="button"
-      value="up script"
+      value="add domain"
       onclick='window.AddBlackList("intelaf.com")'
     />
   </div>
-  <ul class="listado" id="listado_domionios">
-    <li class="item_list">
-      <p>www.test.com</p>
-    </li>
-    <li class="item_list">
-      <p>www.dominio.com</p>
-    </li>
-  </ul>
+  <ul class="listado" id="listado_dominios"></ul>
   <div class="space"></div>
-  <div class="subContianer">
+  <div class="subContianer" display="none">
     <input class="bnt_accion" type="button" value="start record" />
     <p>soporte unicamente para teclas</p>
   </div>

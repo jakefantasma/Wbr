@@ -14,7 +14,7 @@ async function Scripts() {
     //window.log(e.id);
     window.log("queso");
   };
-  window.__InsertHtml = async (obj) => {
+  window  .__InsertHtml = async (obj) => {
     let state_panel = document.getElementById("____ider");
     if (state_panel == null) {
       document.body.innerHTML += obj.popup_html;

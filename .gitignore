@@ -1,4 +1,5 @@
 /node_modules
 /utilities
 /session
+/build
 setting.sqlite

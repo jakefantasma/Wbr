@@ -1,6 +1,8 @@
 const metodos_gestor = require("./gestor");
 const { DbBase } = metodos_gestor();
-class BlackList extends DbBase {
+
+//same
+class Lista extends DbBase {
   constructor(file, name_db) {
     super(file, name_db);
   }
@@ -27,6 +29,15 @@ class BlackList extends DbBase {
     return tmp;
   }
 }
+let dafault_name_file = "setting";
+function BlackList() {
+  return new Lista(dafault_name_file, "blacklist");
+}
+function Whitelist() {
+  return new Lista(dafault_name_file, "whitelist");
+}
+// no create class use funcion to enable setting db
+//ADD METHODS TO SAVE INFO IN SPECIFIC DB, ENABLE ONLY ONE TABLE FOR SETTING <- DEPENDING ELEMENT TO SAVE
 module.exports = () => {
-  return { BlackList };
+  return { BlackList, Whitelist };
 };
